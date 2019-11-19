@@ -1,5 +1,4 @@
 ARG alpine_version="3.10.3"
-ARG kubectl_version="1.14.8"
 ARG kubeval_version="0.14.0"
 FROM garethr/kubeval as kubeval_collector
 
