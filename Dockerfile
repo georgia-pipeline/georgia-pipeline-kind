@@ -11,5 +11,5 @@ RUN curl -sLO "https://storage.googleapis.com/kubernetes-release/release/v${kube
 RUN chmod +x kubectl && mv kubectl -f /usr/bin/kubectl
 
 COPY --from=kubeval_collector /kubeval /usr/bin/
-COPY --from=kubeval_collector /opt/bitnami/kubectl/bin/kubectl /usr/bin/
+COPY --from=kubectl_collector /opt/bitnami/kubectl/bin/kubectl /usr/bin/
 
